@@ -106,6 +106,48 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="assets\blogs\bloginner_1023217196.jpg" />
+    <Content Include="assets\blogs\bloginner_1367336728.jpg" />
+    <Content Include="assets\blogs\bloginner_1370436624.png" />
+    <Content Include="assets\blogs\bloginner_1451724593.jpg" />
+    <Content Include="assets\blogs\bloginner_1454317897.jpg" />
+    <Content Include="assets\blogs\bloginner_1476012253.jpg" />
+    <Content Include="assets\blogs\bloginner_164037958.png" />
+    <Content Include="assets\blogs\bloginner_206679658.png" />
+    <Content Include="assets\blogs\bloginner_2137749998.png" />
+    <Content Include="assets\blogs\bloginner_427000935.jpg" />
+    <Content Include="assets\blogs\bloginner_901917928.png" />
+    <Content Include="assets\blogs\bloginner_976623918.jpg" />
+    <Content Include="assets\blogs\blogouter_1180614047.png" />
+    <Content Include="assets\blogs\blogouter_1365908929.jpg" />
+    <Content Include="assets\blogs\blogouter_1595216175.jpg" />
+    <Content Include="assets\blogs\blogouter_1650633706.png" />
+    <Content Include="assets\blogs\blogouter_1742705991.jpg" />
+    <Content Include="assets\blogs\blogouter_1839398650.jpg" />
+    <Content Include="assets\blogs\blogouter_2121360212.png" />
+    <Content Include="assets\blogs\blogouter_62152870.png" />
+    <Content Include="assets\blogs\blogouter_820982087.png" />
+    <Content Include="assets\blogs\blogouter_90128591.jpg" />
+    <Content Include="assets\blogs\blogouter_953184856.png" />
+    <Content Include="assets\blogs\blogouter_961143857.jpg" />
+    <Content Include="assets\blogs\blogthumbnail_1104340711.png" />
+    <Content Include="assets\blogs\blogthumbnail_1318098303.png" />
+    <Content Include="assets\blogs\blogthumbnail_1338086156.png" />
+    <Content Include="assets\blogs\blogthumbnail_1374416706.jpg" />
+    <Content Include="assets\blogs\blogthumbnail_1549265326.png" />
+    <Content Include="assets\blogs\blogthumbnail_1582530808.jpg" />
+    <Content Include="assets\blogs\blogthumbnail_1765648627.jpg" />
+    <Content Include="assets\blogs\blogthumbnail_1826058569.png" />
+    <Content Include="assets\blogs\blogthumbnail_320122897.png" />
+    <Content Include="assets\blogs\blogthumbnail_603898412.jpg" />
+    <Content Include="assets\blogs\blogthumbnail_717219604.jpg" />
+    <Content Include="assets\blogs\blogthumbnail_798364186.jpg" />
+    <Content Include="assets\gallery\gallery_1677127782.png" />
+    <Content Include="assets\items\item_1121325310.jpg" />
+    <Content Include="assets\items\item_96560449.jpg" />
+    <Content Include="assets\items\test.jpg" />
+    <Content Include="assets\testimonial\testimonial_1677942400.jpg" />
+    <Content Include="assets\testimonial\testimonial_914053959.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\fonts\fontawesome\fontawesome-webfont.svg" />
@@ -991,10 +1033,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="assets\blogs\" />
-    <Folder Include="assets\gallery\" />
-    <Folder Include="assets\items\" />
-    <Folder Include="assets\testimonial\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
