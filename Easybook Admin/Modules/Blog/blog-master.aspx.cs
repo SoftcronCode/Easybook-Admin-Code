@@ -510,6 +510,20 @@ namespace Healing2Peace.Modules.Blog
                         ScriptManager.RegisterStartupScript(this, this.GetType(), "alertmessage", "showException();", true);
                     }
                     break;
+
+                case "delete":
+                    try
+                    {
+                        Int32 menuMasterId = Convert.ToInt32(id);
+                        HdnFBlogMasterId.Value = id;
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alertmessage", "showDeleteBlogModal();", true);
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.Message.ToString();
+                        ScriptManager.RegisterStartupScript(this, this.GetType(), "alertmessage", "showException();", true);
+                    }
+                    break;
                 default:
                     break;
             }
@@ -1785,7 +1799,7 @@ namespace Healing2Peace.Modules.Blog
                 string _connectionstring = (ConfigurationManager.ConnectionStrings["cn"].ConnectionString);
                 using (SqlConnection _sqlConnection = new SqlConnection(_connectionstring))
                 {
-                    string _query = "select * from BlogMaster";
+                    string _query = "select * from BlogMaster where is_delete = 0";
                     _sqlConnection.Open();
                     using (SqlCommand _sqlCommand = new SqlCommand(_query, _sqlConnection))
                     {
@@ -2605,5 +2619,59 @@ namespace Healing2Peace.Modules.Blog
             }
         }
 
+
+        protected void dltYesBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string hidenFieldBlogId = HdnFBlogMasterId.Value;
+                if (hidenFieldBlogId != null)
+                {
+                    int is_delete = 1;
+                    int _blog_master_id = Convert.ToInt32(hidenFieldBlogId);
+                    string _connectionstring = (ConfigurationManager.ConnectionStrings["cn"].ConnectionString);
+                    using (SqlConnection _sqlConnection2 = new SqlConnection(_connectionstring))
+                    {
+                        string _queryUpdate = "update BlogMaster set is_delete=" + is_delete + " where blog_master_id=" + _blog_master_id + "";
+                        using (SqlCommand _sqlCommand2 = new SqlCommand(_queryUpdate, _sqlConnection2))
+                        {
+                            _sqlConnection2.Open();
+
+                            _sqlCommand2.CommandTimeout = 600;
+
+                            int _outputCount = _sqlCommand2.ExecuteNonQuery();
+                            if (_outputCount > 0)
+                            {
+                                try
+                                {
+                                    getAllBlog();
+                                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alertmessage", "showUpdate();", true);
+
+                                }
+                                catch (Exception ex)
+                                {
+                                    ex.Message.ToString();
+                                }
+
+                            }
+                            else
+                            {
+                                ScriptManager.RegisterStartupScript(this, this.GetType(), "alertmessage", "showException();", true);
+                            }
+                            _sqlConnection2.Close();
+                        }
+                    }
+                }
+                else
+                {
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "alertmessage", "showException()", true);
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.Message.ToString();
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alertmessage", "showException()", true);
+            }
+        }
     }
 }
